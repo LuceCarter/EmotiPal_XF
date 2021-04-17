@@ -7,7 +7,7 @@
              ios:Page.UseSafeArea="True"
              NavigationPage.HasNavigationBar="False">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="#252525">
         <Grid>
             <Image Source="orange_bg"
                    Aspect="AspectFill" />
@@ -30,10 +30,18 @@
                      VerticalOptions="CenterAndExpand"
                      Spacing="25">
             <Button Text="Analyse Sentiment"
-                    Command="{Binding AnalyseTextCommand}"/>
+                    Command="{Binding AnalyseTextCommand}"
+                    xct:ShadowEffect.Color="Black"
+                    xct:ShadowEffect.Radius="10"
+                    xct:ShadowEffect.OffsetX="15"
+                    xct:ShadowEffect.OffsetY="15"/>
 
             <Button Text="Analyse Emotion"
-                    Command="{Binding AnalyseBodyLanguageCommand}" />
+                    Command="{Binding AnalyseBodyLanguageCommand}" 
+                    xct:ShadowEffect.Color="Black"
+                    xct:ShadowEffect.Radius="10"
+                    xct:ShadowEffect.OffsetX="15"
+                    xct:ShadowEffect.OffsetY="15"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>
