@@ -3,6 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmotiPal.App">
     <Application.Resources>
+        <Thickness x:Key="ButtonStackLayoutThickness">50,0,50,0</Thickness>
+        <Color x:Key="SecondaryColorBlue">#0F2745</Color>
+        <Color x:Key="PrimaryColorOrange">#FFFFA03A</Color>
 
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="WorkSans"/>
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColorBlue}"/>
+            <Setter Property="TextColor" Value="{StaticResource PrimaryColorOrange}" />
+        </Style>
     </Application.Resources>
 </Application>
