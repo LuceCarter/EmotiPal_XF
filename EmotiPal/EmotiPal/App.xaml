@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="EmotiPal.App">
     <Application.Resources>
         <Thickness x:Key="ButtonStackLayoutThickness">50,0,50,0</Thickness>
@@ -12,6 +13,10 @@
             <Setter Property="FontSize" Value="24" />
             <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColorBlue}"/>
             <Setter Property="TextColor" Value="{StaticResource PrimaryColorOrange}" />
+            <Setter Property="xct:ShadowEffect.Color" Value="Black" />
+            <Setter Property="xct:ShadowEffect.Radius" Value="10" />
+            <Setter Property="xct:ShadowEffect.OffsetX" Value="15" />
+            <Setter Property="xct:ShadowEffect.OffsetY" Value="15" />          
         </Style>
     </Application.Resources>
 </Application>
