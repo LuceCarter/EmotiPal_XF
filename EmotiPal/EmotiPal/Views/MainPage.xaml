@@ -14,7 +14,7 @@
                    FontSize="32"
                    VerticalOptions="Center"
                    HorizontalTextAlignment="Center"
-                   Text="Body Language Assistant!"                   
+                   Text="EmotiPal!"                   
                    TextColor="Black"/>
             <StackLayout VerticalOptions="End"                         
                          TranslationY="45">
