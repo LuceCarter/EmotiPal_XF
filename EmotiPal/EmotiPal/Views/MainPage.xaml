@@ -23,5 +23,14 @@
                    WidthRequest="100"/>
             </StackLayout>
         </Grid>
+        <StackLayout Padding="{StaticResource ButtonStackLayoutThickness}"
+                     VerticalOptions="CenterAndExpand"
+                     Spacing="25">
+            <Button Text="Analyse Sentiment"
+                    Command="{Binding AnalyseTextCommand}"/>
+
+            <Button Text="Analyse Emotion"
+                    Command="{Binding AnalyseBodyLanguageCommand}" />
+        </StackLayout>
     </StackLayout>
 </ContentPage>
