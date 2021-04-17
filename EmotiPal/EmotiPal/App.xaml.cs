@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using EmotiPal.Views;
 
 [assembly: ExportFont("WorkSans.ttf", Alias = "WorkSans")]
+[assembly: ExportFont("RibeyeMarrow.ttf", Alias = "Ribeye")]
 namespace EmotiPal
 {
     public partial class App : Application

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmotiPal.Views.MainPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              ios:Page.UseSafeArea="True"
              NavigationPage.HasNavigationBar="False">
 
@@ -10,17 +11,19 @@
         <Grid>
             <Image Source="orange_bg"
                    Aspect="AspectFill" />
-            <Label FontFamily="WorkSans"
-                   FontSize="32"
-                   VerticalOptions="Center"
+            <Label FontFamily="Ribeye"
+                   FontSize="72"
+                   VerticalOptions="StartAndExpand"
                    HorizontalTextAlignment="Center"
                    Text="EmotiPal!"                   
-                   TextColor="Black"/>
+                   TextColor="Black"                   
+                   />
             <StackLayout VerticalOptions="End"                         
                          TranslationY="45">
                 <Image Source="crossed_swords"                   
                    HeightRequest="100"
-                   WidthRequest="100"/>
+                   WidthRequest="100"
+                       />
             </StackLayout>
         </Grid>
         <StackLayout Padding="{StaticResource ButtonStackLayoutThickness}"
