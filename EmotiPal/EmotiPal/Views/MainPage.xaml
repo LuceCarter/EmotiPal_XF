@@ -1,24 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EmotiPal.Views.MainPage">
+             x:Class="EmotiPal.Views.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             NavigationPage.HasNavigationBar="False">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <Grid>
+            <Image Source="orange_bg"
+                   Aspect="AspectFill" />
+            <Label FontFamily="WorkSans"
+                   FontSize="32"
+                   VerticalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Text="Body Language Assistant!"                   
+                   TextColor="Black"/>
+            <StackLayout VerticalOptions="End"                         
+                         TranslationY="45">
+                <Image Source="crossed_swords"                   
+                   HeightRequest="100"
+                   WidthRequest="100"/>
+            </StackLayout>
+        </Grid>
     </StackLayout>
-
 </ContentPage>
