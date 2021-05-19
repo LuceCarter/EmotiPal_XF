@@ -7,3 +7,9 @@ UWP: ![Build status](https://build.appcenter.ms/v0.1/apps/373f11ec-5a03-4f8e-bfb
 ## Introduction
 
 This app is intended to be used by anyone who wants to improve their skills interpreting sentiment in text or analysing body language in faces.
+
+It uses [Microsoft Cognitive Services](https://aka.ms/trycogservices) for both features.
+
+### Analyse Sentiment
+
+The first feature in the menu when you start the app, is Analyse Sentiment. This uses to 

@@ -122,6 +122,15 @@
       <AndroidResource Include="Resources\drawable-mdpi\crossed_swords.png"/>
       <AndroidResource Include="Resources\drawable-ldpi\crossed_swords.png"/>
   </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\orange_bg.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\orange_bg.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\orange_bg.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\orange_bg.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\orange_bg.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\orange_bg.png"/>
+  </ItemGroup>
+
 
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

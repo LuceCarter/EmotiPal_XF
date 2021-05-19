@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmotiPal.Views.AnalyseTextPage">
-    <StackLayout Padding="25">
+    <StackLayout Padding="15">
         <Label Text="Enter text to analyse:"/>
         <Editor AutoSize="TextChanges"
                BackgroundColor="{StaticResource PrimaryColorOrange}"
@@ -11,7 +11,8 @@
         <Button Text="Analyse Sentiment"                
                 Command="{Binding AnalyseTextCommand}" />
         <Label VerticalOptions="CenterAndExpand" 
-		   FontSize="36" Text="{Binding SentimentAnalysisResult}" 
+		   FontSize="24" Text="{Binding SentimentAnalysisResult}" 
 		   TextColor="{Binding SentimentResultColour}"/>
-    </StackLayout>
+       
+    </StackLayout>    
 </ContentPage>
