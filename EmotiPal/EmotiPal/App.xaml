@@ -4,6 +4,7 @@
             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="EmotiPal.App">
     <Application.Resources>
+        <Color x:Key="GreyBackgroundPrimary">#252525</Color>
         <Thickness x:Key="ButtonStackLayoutThickness">50,0,50,0</Thickness>
         <Color x:Key="SecondaryColorBlue">#0F2745</Color>
         <Color x:Key="PrimaryColorOrange">#FFFFA03A</Color>
@@ -17,6 +18,10 @@
             <Setter Property="xct:ShadowEffect.Radius" Value="10" />
             <Setter Property="xct:ShadowEffect.OffsetX" Value="15" />
             <Setter Property="xct:ShadowEffect.OffsetY" Value="15" />          
+        </Style>
+
+        <Style TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{StaticResource GreyBackgroundPrimary}" />            
         </Style>
     </Application.Resources>
 </Application>

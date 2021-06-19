@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmotiPal.Views.MainPage"
+             xmlns:helpers="clr-namespace:EmotiPal.Helpers"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"             
              ios:Page.UseSafeArea="True"
              NavigationPage.HasNavigationBar="False">
 
-    <StackLayout BackgroundColor="#252525">
+    <StackLayout BackgroundColor="{StaticResource GreyBackgroundPrimary}">
         <Grid>
             <Image Source="orange_bg"
                    Aspect="AspectFill" />
@@ -19,19 +20,21 @@
                    />
             <StackLayout VerticalOptions="End"                         
                          TranslationY="45">
-                <Image Source="crossed_swords"                   
-                   HeightRequest="100"
-                   WidthRequest="100"
-                       />
+                <Image                 
+                   HeightRequest="150"
+                   WidthRequest="150"
+                    Source="helpinghands"/>
             </StackLayout>
         </Grid>
         <StackLayout Padding="{StaticResource ButtonStackLayoutThickness}"
                      VerticalOptions="CenterAndExpand"
-                     Spacing="25">
+                     Spacing="25" >
             <Button Text="Analyse Sentiment"
+                    FontSize="32"
                     Command="{Binding AnalyseTextCommand}" />
 
             <Button Text="Analyse Emotion"
+                    FontSize="32"
                     Command="{Binding AnalyseBodyLanguageCommand}" />
         </StackLayout>
     </StackLayout>

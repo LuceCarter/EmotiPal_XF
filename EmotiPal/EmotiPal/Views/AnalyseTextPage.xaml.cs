@@ -16,6 +16,8 @@ namespace EmotiPal.Views
         public AnalyseTextPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasBackButton(this, true);
             BindingContext = new AnalyseTextPageViewModel();
         }
     }

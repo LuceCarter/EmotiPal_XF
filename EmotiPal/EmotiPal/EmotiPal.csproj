@@ -11,11 +11,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\FABrands.otf" />
+    <None Remove="Resources\Fonts\FARegular.otf" />
+    <None Remove="Resources\Fonts\FASolid.otf" />
     <None Remove="Resources\Fonts\RibeyeMarrow.ttf" />
     <None Remove="Resources\Fonts\WorkSans.ttf" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Fonts\FABrands.otf" />
+    <EmbeddedResource Include="Resources\Fonts\FARegular.otf" />
+    <EmbeddedResource Include="Resources\Fonts\FASolid.otf" />
     <EmbeddedResource Include="Resources\Fonts\RibeyeMarrow.ttf" />
     <EmbeddedResource Include="Resources\Fonts\WorkSans.ttf" />
   </ItemGroup>
