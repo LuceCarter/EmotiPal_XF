@@ -16,7 +16,7 @@ namespace EmotiPal.Views
         public AnalyseBodyLanguagePage()
         {
             InitializeComponent();
-            BindingContext = new AnalyseBodyLanguagePageViewModel();
+            BindingContext = new AnalyseBodyLanguagePageViewModel();            
         }
     }
 }
