@@ -49,18 +49,18 @@ namespace EmotiPal.ViewModels
             {
                 case "Unknown":
                     SentimentResultColour = Color.Blue;
-                    SentimentAnalysisResult = "Hmmm I can't seem to tell how you are feeling!";
+                    SentimentAnalysisResult = "😕 Hmmm I can't seem to tell the sentiment!";
                     break;
                 case "Normal":
-                    SentimentAnalysisResult = "You seem normal to me!";
+                    SentimentAnalysisResult = "😐 This text seems neutral to me!";
                     break;
                 case "Positive":
                     SentimentResultColour = Color.Green;
-                    SentimentAnalysisResult = "Zip-a-dee-doo-dah, zip-a-dee-ay My, oh, my, what a wonderful day ";
+                    SentimentAnalysisResult = "😁 Yay! This text seems happy!";
                     break;
                 case "Negative":
                     SentimentResultColour = Color.Red;
-                    SentimentAnalysisResult = "Sucks to be you!";
+                    SentimentAnalysisResult = "😥 This text appears to be not happy";
                     break;
             }
         }

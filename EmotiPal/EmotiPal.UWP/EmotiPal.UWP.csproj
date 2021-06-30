@@ -108,6 +108,7 @@
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
     <Content Include="crossed_swords.png" />
+    <Content Include="helpinghands.png" />
     <Content Include="orange_bg.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
       <SubType>Designer</SubType>

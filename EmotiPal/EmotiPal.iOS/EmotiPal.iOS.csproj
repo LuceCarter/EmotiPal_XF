@@ -211,4 +211,13 @@
       <Visible>False</Visible>
     </ImageAsset>
   </ItemGroup>
+  <ItemGroup>
+      <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg%403x.png"/>
+      <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg%402x.png"/>
+      <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg.png"/>
+      <ImageAsset Include="Assets.xcassets\orangebg.imageset\Contents.json">
+          <Visible>False</Visible>
+      </ImageAsset>
+  </ItemGroup>
+
 </Project>

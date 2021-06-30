@@ -30,11 +30,11 @@
                      VerticalOptions="CenterAndExpand"
                      Spacing="25" >
             <Button Text="Analyse Sentiment"
-                    FontSize="32"
+                    FontSize="24"
                     Command="{Binding AnalyseTextCommand}" />
 
             <Button Text="Analyse Emotion"
-                    FontSize="32"
+                    FontSize="24"
                     Command="{Binding AnalyseBodyLanguageCommand}" />
         </StackLayout>
     </StackLayout>

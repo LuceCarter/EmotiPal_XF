@@ -153,5 +153,14 @@
     <AndroidResource Include="Resources\drawable-mdpi\helpinghands.png" />
     <AndroidResource Include="Resources\drawable-ldpi\helpinghands.png" />
   </ItemGroup>
+  <ItemGroup>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\orangebg.png"/>
+      <AndroidResource Include="Resources\drawable-xxhdpi\orangebg.png"/>
+      <AndroidResource Include="Resources\drawable-xhdpi\orangebg.png"/>
+      <AndroidResource Include="Resources\drawable-hdpi\orangebg.png"/>
+      <AndroidResource Include="Resources\drawable-mdpi\orangebg.png"/>
+      <AndroidResource Include="Resources\drawable-ldpi\orangebg.png"/>
+  </ItemGroup>
+
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

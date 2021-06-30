@@ -13,7 +13,8 @@
                TextColor="Black"/>
         <Button Text="Analyse Sentiment"                
                 Command="{Binding AnalyseTextCommand}" />
-        <Label VerticalOptions="CenterAndExpand" 
+        <Label VerticalOptions="CenterAndExpand"
+               HorizontalOptions="Center"
 		   FontSize="24" Text="{Binding SentimentAnalysisResult}" 
 		   TextColor="{Binding SentimentResultColour}"/>
        

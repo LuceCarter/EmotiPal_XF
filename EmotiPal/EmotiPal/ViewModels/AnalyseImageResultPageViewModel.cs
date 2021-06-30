@@ -15,6 +15,7 @@ namespace EmotiPal.ViewModels
         public AnalyseImageResultPageViewModel(StreamImageSource photo, IList<DetectedFace> faces)
         {
             AnalysedPhoto = photo;
+            Console.WriteLine("Stream: " + photo.Stream.ToString());
             var emotions = faces.Select(face => GetEmotion(face));
 
             Description = "Most likely emotion: " + emotions.FirstOrDefault().Key + " with a score of " + emotions.FirstOrDefault().Value.ToString();
