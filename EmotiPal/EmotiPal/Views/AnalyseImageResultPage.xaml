@@ -2,16 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:viewmodels="clr-namespace:EmotiPal.ViewModels" x:DataType="viewmodels:AnalyseImageResultPageViewModel"
-             x:Class="EmotiPal.Views.AnalyseImageResultPage">    
+             x:Class="EmotiPal.Views.AnalyseImageResultPage">
+    
         
     <StackLayout>
-        <StackLayout>
-            <Label Text="{Binding Description}"
+        <StackLayout>             
+           <Image Source="{Binding AnalysedPhoto}" />
+             <Label Text="{Binding Description}"
             HorizontalOptions="CenterAndExpand"
             FontSize="24"
             VerticalOptions="Center"
-			TextColor="{StaticResource PrimaryColorOrange}"/>           
-           <Image Source="{Binding AnalysedPhoto}"/>          
+			TextColor="{StaticResource PrimaryColorOrange}"/>         
         </StackLayout>
        
     </StackLayout>

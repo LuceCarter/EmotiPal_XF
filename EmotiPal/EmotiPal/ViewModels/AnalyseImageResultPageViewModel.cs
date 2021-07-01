@@ -10,18 +10,18 @@ namespace EmotiPal.ViewModels
 {
     public class AnalyseImageResultPageViewModel : BaseViewModel
     {
-        StreamImageSource _analysedPhoto;
+        ImageSource _analysedPhoto;
         string _description;
-        public AnalyseImageResultPageViewModel(StreamImageSource photo, IList<DetectedFace> faces)
+
+        public AnalyseImageResultPageViewModel(string photoPath, IList<DetectedFace> faces)
         {
-            AnalysedPhoto = photo;
-            Console.WriteLine("Stream: " + photo.Stream.ToString());
+            AnalysedPhoto = ImageSource.FromFile(photoPath);
             var emotions = faces.Select(face => GetEmotion(face));
 
             Description = "Most likely emotion: " + emotions.FirstOrDefault().Key + " with a score of " + emotions.FirstOrDefault().Value.ToString();
         }
 
-        public StreamImageSource AnalysedPhoto
+        public ImageSource AnalysedPhoto
         {
             get => _analysedPhoto;
             set => SetProperty(ref _analysedPhoto, value);

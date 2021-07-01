@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -55,10 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Azure.AI.TextAnalytics">
-      <Version>5.0.0</Version>
+      <Version>5.1.0-beta.7</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.Face">
-      <Version>2.4.0-preview</Version>
+      <Version>2.7.0-preview.1</Version>
     </PackageReference>
     <PackageReference Include="Refractored.MvvmHelpers">
       <Version>1.6.2</Version>
@@ -73,7 +72,7 @@
       <Version>28.0.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.CommunityToolkit">
-      <Version>1.1.0</Version>
+      <Version>1.2.0-pre2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
@@ -110,7 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EmotiPal\EmotiPal.csproj">
-      <Project>{0D40CE9B-6166-46D0-BEE3-C5832A8AF233}</Project>
+      <Project>{2B3350A2-2CA7-4C28-93A0-B36C81D209E3}</Project>
       <Name>EmotiPal</Name>
     </ProjectReference>
   </ItemGroup>
@@ -154,12 +153,12 @@
     <AndroidResource Include="Resources\drawable-ldpi\helpinghands.png" />
   </ItemGroup>
   <ItemGroup>
-      <AndroidResource Include="Resources\drawable-xxxhdpi\orangebg.png"/>
-      <AndroidResource Include="Resources\drawable-xxhdpi\orangebg.png"/>
-      <AndroidResource Include="Resources\drawable-xhdpi\orangebg.png"/>
-      <AndroidResource Include="Resources\drawable-hdpi\orangebg.png"/>
-      <AndroidResource Include="Resources\drawable-mdpi\orangebg.png"/>
-      <AndroidResource Include="Resources\drawable-ldpi\orangebg.png"/>
+      <AndroidResource Include="Resources\drawable-xxxhdpi\orangebg.png" />
+      <AndroidResource Include="Resources\drawable-xxhdpi\orangebg.png" />
+      <AndroidResource Include="Resources\drawable-xhdpi\orangebg.png" />
+      <AndroidResource Include="Resources\drawable-hdpi\orangebg.png" />
+      <AndroidResource Include="Resources\drawable-mdpi\orangebg.png" />
+      <AndroidResource Include="Resources\drawable-ldpi\orangebg.png" />
   </ItemGroup>
 
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -29,7 +29,8 @@
             <StackLayout HorizontalOptions="Center"
                          Orientation="Vertical"
                          Spacing="40"
-                         VerticalOptions="Center">
+                         VerticalOptions="Center"
+                         BackgroundColor="Transparent">
                 <ActivityIndicator Color="White"
                                    IsRunning="true"
                                    Scale="2"/>
