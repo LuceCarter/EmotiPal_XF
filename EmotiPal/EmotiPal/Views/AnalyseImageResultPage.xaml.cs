@@ -15,7 +15,7 @@ namespace EmotiPal.Views
     {
         public AnalyseImageResultPage()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
     }
 }

@@ -29,6 +29,7 @@ namespace EmotiPal.ViewModels
             get => new Command(() =>
             {
                 navigation.PushAsync(new NavigationPage(new AnalyseBodyLanguagePage()));
+               
             });
         }
     }

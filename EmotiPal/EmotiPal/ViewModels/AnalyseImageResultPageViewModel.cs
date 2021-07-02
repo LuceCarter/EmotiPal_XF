@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace EmotiPal.ViewModels
@@ -19,6 +20,7 @@ namespace EmotiPal.ViewModels
             var emotions = faces.Select(face => GetEmotion(face));
 
             Description = "Most likely emotion: " + emotions.FirstOrDefault().Key + " with a score of " + emotions.FirstOrDefault().Value.ToString();
+           
         }
 
         public ImageSource AnalysedPhoto

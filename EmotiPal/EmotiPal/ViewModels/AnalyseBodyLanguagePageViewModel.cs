@@ -134,7 +134,6 @@ namespace EmotiPal.ViewModels
                 {
                     await UploadImageToBlobStorage(photo.Path);
                     var photoForDisplay = (StreamImageSource)ImageSource.FromStream(() => stream);
-                    
                     await Application.Current.MainPage.Navigation.PushAsync(new AnalyseImageResultPage { BindingContext = new AnalyseImageResultPageViewModel(photo.Path, faces) });
                 }
             }
