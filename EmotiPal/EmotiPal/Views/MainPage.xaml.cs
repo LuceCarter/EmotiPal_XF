@@ -14,7 +14,7 @@ namespace EmotiPal.Views
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new MainPageViewModel(Navigation);
+            BindingContext = new MainPageViewModel();
         }
     }
 }

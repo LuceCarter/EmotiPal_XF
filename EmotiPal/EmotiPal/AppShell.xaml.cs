@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using EmotiPal.Views;
+﻿using EmotiPal.Views;
 using Xamarin.Forms;
 
 namespace EmotiPal
@@ -11,6 +9,8 @@ namespace EmotiPal
         {
             InitializeComponent();
             Routing.RegisterRoute("imageresult", typeof(AnalyseImageResultPage));
+            Routing.RegisterRoute("sentiment", typeof(AnalyseTextPage));
+            Routing.RegisterRoute("bodylanguage", typeof(AnalyseBodyLanguagePage));
         }
     }
 }

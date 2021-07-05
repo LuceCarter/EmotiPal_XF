@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
-using EmotiPal.Views;
+﻿using System.Windows.Input;
 using MvvmHelpers;
 using Xamarin.Forms;
 
@@ -10,27 +6,20 @@ namespace EmotiPal.ViewModels
 {
     public class MainPageViewModel : BaseViewModel
     {
-        private readonly INavigation navigation;
-        public MainPageViewModel(INavigation navigation)
+        public MainPageViewModel()
         {
-            this.navigation = navigation;
-        }
-
-        public ICommand AnalyseTextCommand
-        {
-            get => new Command(() =>
+            AnalyseTextCommand = new Command(() =>
             {
-                Shell.Current.GoToAsync("//sentiment");                
+                Shell.Current.GoToAsync("sentiment");
+            });
+            AnalyseBodyLanguageCommand = new Command(() =>
+            {
+                Shell.Current.GoToAsync("bodylanguage");
             });
         }
 
-        public ICommand AnalyseBodyLanguageCommand
-        {
-            get => new Command(() =>
-            {
-                Shell.Current.GoToAsync("//bodylanguage");
+        public ICommand AnalyseTextCommand { get; }
 
-            });
-        }
+        public ICommand AnalyseBodyLanguageCommand { get; }
     }
 }
