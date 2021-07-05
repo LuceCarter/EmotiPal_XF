@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:EmotiPal.Views"
+    x:Class="EmotiPal.AppShell">
+
+    <FlyoutItem Title="Menu"
+                Route="Menu">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Analyse Sentiment"
+                Route="Sentiment">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:AnalyseTextPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Analyse Body Language"
+                Route="BodyLanguage">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate views:AnalyseBodyLanguagePage}" />
+        </Tab>
+        </FlyoutItem>
+</Shell>

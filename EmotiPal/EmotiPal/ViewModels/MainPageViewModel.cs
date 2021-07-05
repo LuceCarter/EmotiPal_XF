@@ -20,7 +20,7 @@ namespace EmotiPal.ViewModels
         {
             get => new Command(() =>
             {
-                navigation.PushAsync(new NavigationPage(new AnalyseTextPage()));
+                Shell.Current.GoToAsync("//sentiment");                
             });
         }
 
@@ -28,8 +28,8 @@ namespace EmotiPal.ViewModels
         {
             get => new Command(() =>
             {
-                navigation.PushAsync(new NavigationPage(new AnalyseBodyLanguagePage()));
-               
+                Shell.Current.GoToAsync("//bodylanguage");
+
             });
         }
     }
