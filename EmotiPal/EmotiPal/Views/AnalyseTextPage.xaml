@@ -17,6 +17,23 @@
                HorizontalOptions="Center"
 		   FontSize="24" Text="{Binding SentimentAnalysisResult}" 
 		   TextColor="{Binding SentimentResultColour}"/>
+
+        <CollectionView ItemsSource="{Binding SentimentResults}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Analysed Text: "/>
+                            <Label Text="{Binding AnalysedText}" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Sentiment: "/>
+                            <Label Text="{Binding Sentiment}" />
+                        </StackLayout>
+                    </StackLayout>                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView> 
        
     </StackLayout>    
 </ContentPage>

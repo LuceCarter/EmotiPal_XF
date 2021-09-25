@@ -29,9 +29,9 @@ namespace EmotiPal.ViewModels
         {
             TakePhotoCommand = new AsyncCommand(TakePhotoAsync);
             PickPhotoCommand = new AsyncCommand(PickPhotoAsync);
-            faceClient = new FaceClient(new ApiKeyServiceClientCredentials(AzureKeys.FaceApiKey))
+            faceClient = new FaceClient(new ApiKeyServiceClientCredentials(APIKeys.FaceApiKey))
             {
-                Endpoint = AzureKeys.BaseUrl
+                Endpoint = APIKeys.BaseUrl
             };
         }
         public string PhotoPath { get; set; }
@@ -77,7 +77,7 @@ namespace EmotiPal.ViewModels
 
         private async Task<string> UploadImageToBlobStorage(string imagePath)
         {
-            var account = CloudStorageAccount.Parse(AzureKeys.BlobStorageConnectionString);
+            var account = CloudStorageAccount.Parse(APIKeys.BlobStorageConnectionString);
             var client = account.CreateCloudBlobClient();
             var container = client.GetContainerReference("sentiment-container");
             await container.CreateIfNotExistsAsync();

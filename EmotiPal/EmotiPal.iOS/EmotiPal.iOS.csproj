@@ -133,6 +133,9 @@
     <PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.Face">
       <Version>2.7.0-preview.1</Version>
     </PackageReference>
+    <PackageReference Include="Realm">
+      <Version>10.5.0</Version>
+    </PackageReference>
     <PackageReference Include="Refractored.MvvmHelpers">
       <Version>1.6.2</Version>
     </PackageReference>
@@ -140,7 +143,7 @@
       <Version>5.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.CommunityToolkit">
-      <Version>1.2.0-pre2</Version>
+      <Version>1.2.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
@@ -213,12 +216,17 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-      <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg%403x.png" />
-      <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg%402x.png" />
-      <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg.png" />
-      <ImageAsset Include="Assets.xcassets\orangebg.imageset\Contents.json">
-          <Visible>False</Visible>
-      </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\orangebg.imageset\orangebg.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\orangebg.imageset\Contents.json">
+      <Visible>False</Visible>
+    </ImageAsset>
   </ItemGroup>
-
 </Project>
