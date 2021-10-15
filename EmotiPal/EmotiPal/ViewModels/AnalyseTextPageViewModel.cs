@@ -112,6 +112,8 @@ namespace EmotiPal.ViewModels
             }                       
         }
 
+        // Realm calls have to be run on the same thread so this is called from OnAppearing
+        // in code-behind as this always uses a single thread.
         public async Task InitialiseRealm()
         {
             app = Realms.Sync.App.Create(APIKeys.RealmAppId);
