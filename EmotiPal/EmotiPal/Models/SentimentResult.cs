@@ -10,7 +10,11 @@ namespace EmotiPal.Models
     {
         [PrimaryKey]
         [MapTo("_id")]
-        public ObjectId Id { get; set; } = ObjectId.GenerateNewId(); 
+        public ObjectId Id { get; set; } = ObjectId.GenerateNewId();
+        
+        [Required]
+        [MapTo("_partition")]
+        public string PartitionKey { get; set; }
 
         [Required]
         public string AnalysedText { get; set; }

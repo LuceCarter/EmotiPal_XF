@@ -21,14 +21,14 @@
         <CollectionView ItemsSource="{Binding SentimentResults}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout>
+                    <StackLayout Padding="20">
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Analysed Text: "/>
-                            <Label Text="{Binding AnalysedText}" />
+                            <Label Text="Analysed Text: " TextColor="White"/>
+                            <Label Text="{Binding AnalysedText}" TextColor="White"/>
                         </StackLayout>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="Sentiment: "/>
-                            <Label Text="{Binding Sentiment}" />
+                            <Label Text="Sentiment: " TextColor="White"/>
+                            <Label Text="{Binding Sentiment}" TextColor="White"/>
                         </StackLayout>
                     </StackLayout>                    
                 </DataTemplate>

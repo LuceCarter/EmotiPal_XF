@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Realms;
+using Realms.Sync;
+using System.Linq;
 
 namespace EmotiPal.ViewModels
 {
@@ -18,20 +21,19 @@ namespace EmotiPal.ViewModels
         private string _sentimentAnalysisResult;
         private Color _sentimentResultColour;
         private ObservableCollection<SentimentResult> _sentimentResults;
-        private RealmDatabaseService realmDatabaseService;
+        private Realms.Sync.App app;
+        private User user;
+        private Realm realm;
+        private SyncConfiguration config;
+        
 
         public AnalyseTextPageViewModel()
         {
             AnalyseTextCommand = new Command(async () => await AnalyseText(TextForAnalysis));
-            SentimentResultColour = Color.Black;
-            realmDatabaseService = new RealmDatabaseService();
+            SentimentResultColour = Color.Black;                                  
+        }        
 
-            Task.Run(async () =>
-            {
-                SentimentResults = await realmDatabaseService.GetAllSentimentResults();
-            });
-        }
-
+        
         public string TextForAnalysis
         {
             get => _textForAnalysis;
@@ -94,9 +96,32 @@ namespace EmotiPal.ViewModels
                     break;
             }
 
-            await realmDatabaseService.LogSentimentResult(result);
-            
+            try
+            {
+                result.PartitionKey = "myPartition";
+                realm = await Realm.GetInstanceAsync(config);
+                realm.Write(() =>
+                {
+                    realm.Add(result);
+                });
+
+                    
+            } catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Cannot write to database", ex.Message, "OK");
+            }                       
         }
 
+        public async Task InitialiseRealm()
+        {
+            app = Realms.Sync.App.Create(APIKeys.RealmAppId);
+            user = await app.LogInAsync(Credentials.Anonymous());
+            config = new SyncConfiguration("myPartition", user)
+            {
+                SchemaVersion = 3
+            };
+            realm = await Realm.GetInstanceAsync(config);
+            SentimentResults = new ObservableCollection<SentimentResult>(realm.All<SentimentResult>().ToList());
+        }
     }
 }
